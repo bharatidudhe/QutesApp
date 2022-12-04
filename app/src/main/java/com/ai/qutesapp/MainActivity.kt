@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewModel = ViewModelProvider(this,MainViewModelFactory(this)).get(MainViewModel::class.java)
+        viewModel = ViewModelProvider(this,MainViewModelFactory(application)).get(MainViewModel::class.java)
         setQuote(viewModel.getQuote())
 
     }
